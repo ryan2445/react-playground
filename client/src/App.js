@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { IconButton, TextField } from "@mui/material";
+import { Button, IconButton, TextField } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -28,13 +28,22 @@ function NotesList() {
   return (
     <div>
       <div>
+        <hr style={{ border: "1px solid grey" }}></hr>
         {notes.map((note, i) => (
-          <div key={i}>{note}</div>
+          <div key={i}>
+            <div>{note}</div>
+            <hr style={{ border: "1px solid grey" }}></hr>
+          </div>
         ))}
       </div>
       {editing && (
         <div
-          style={{ display: "flex", justifyContent: "center", width: "340px" }}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            width: "340px",
+            paddingTop: "10px",
+          }}
         >
           <TextField
             variant="outlined"
@@ -55,13 +64,20 @@ function NotesList() {
         </div>
       )}
       <div style={{ paddingTop: "15px" }}>
-        <IconButton
+        <Button
+          style={{
+            borderRadius: "50px",
+            minWidth: "38px",
+            paddingLeft: "0px",
+            paddingRight: "0px",
+          }}
+          variant="contained"
           color="primary"
           onClick={() => setEditing(true)}
           disabled={editing}
         >
           <AddIcon></AddIcon>
-        </IconButton>
+        </Button>
       </div>
     </div>
   );
