@@ -1,15 +1,38 @@
 .App {
-  text-align: center;
-  background-color: #d3d3d3;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
+    text-align: center;
+    background-color: #d3d3d3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
 }
 
-.App-header {
-  max-width: 1000px;
+.listItem {
+    display: flex;
+    justify-content: center;
+}
+
+.listItem button {
+    padding: 0px;
+}
+
+@media only screen and (min-width: 601px) {
+    .App-header {
+        width: 650px;
+    }
+    .listItems {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .App-header {
+        width: 300px;
+    }
+    .listItems {
+        font-size: 15px;
+    }
 }
