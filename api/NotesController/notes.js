@@ -15,6 +15,9 @@ async function notesGet(event, context, callback) {
 
     return {
         statusCode: 200,
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        },
         body: JSON.stringify(response.Item)
     }
 }
@@ -35,6 +38,9 @@ async function notesPost(event, context, callback) {
 
     return {
         statusCode: 200,
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        },
         body: JSON.stringify('Item created!')
     }
 }
