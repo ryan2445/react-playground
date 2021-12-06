@@ -69,7 +69,7 @@ function NotesList() {
     return (
         <div>
             <div className="listItems">
-                <hr style={{ border: '1px solid grey' }}></hr>
+                <hr />
                 {loading ? (
                     <CircularProgress />
                 ) : (
@@ -92,7 +92,7 @@ function NotesList() {
                                     </IconButton>
                                 </div>
                             </div>
-                            <hr style={{ border: '1px solid grey' }}></hr>
+                            <hr />
                         </div>
                     ))
                 )}
