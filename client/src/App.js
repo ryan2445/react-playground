@@ -100,12 +100,6 @@ function NotesList() {
             {editing && (
                 <div
                     className="textField"
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        paddingTop: '10px',
-                        margin: 'auto'
-                    }}
                 >
                     <TextField
                         variant="outlined"
@@ -115,7 +109,7 @@ function NotesList() {
                         onKeyUp={keyPressed}
                         onChange={textFieldChanged}
                     />
-                    <div style={{ alignSelf: 'center', paddingLeft: '5px' }}>
+                    <div className="deleteButton">
                         <IconButton
                             color="error"
                             size="small"
@@ -128,12 +122,6 @@ function NotesList() {
             )}
             <div style={{ paddingTop: '15px' }}>
                 <Button
-                    style={{
-                        borderRadius: '50px',
-                        minWidth: '38px',
-                        paddingLeft: '0px',
-                        paddingRight: '0px'
-                    }}
                     variant="contained"
                     color="primary"
                     onClick={() => setEditing(true)}
